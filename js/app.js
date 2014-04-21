@@ -9,7 +9,8 @@
     
     app.constant('appConfig', {
         project: 'R.T.Henry',
-        views: ['Home', 'About', 'Contact']
+        views: ['Home', 'About', 'Contact'],
+        navbarColor: '#123456'
     });
     
     /* configure routing */
