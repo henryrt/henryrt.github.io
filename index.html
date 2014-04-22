@@ -46,7 +46,7 @@
           <ul class="nav navbar-nav">              
               <li ng-repeat="view in navModel.views"
                   ng-class="{ active: navModel.isActive('/{{view.toLowerCase()}}')}"> 
-              <a href="{{'#' + view.toLowerCase()}}">{{view}}</a></li>
+              <a href="{{'#/' + view.toLowerCase()}}">{{view}}</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -66,6 +66,7 @@
     <script src="scripts/angular-route/angular-route.js"></script>
     <script src="scripts/angular-bootstrap/ui-bootstrap.js"></script>
     <script src="js/app.js"></script>
+    <script src="data/links.js"></script>
     <script src="home/home.js"></script>
     <script src="about/about.js"></script>
     <script src="contact/contact.js"></script>

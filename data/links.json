@@ -1,0 +1,39 @@
+{
+    "groups":
+    [ 
+        { 
+            "name": "Finance",
+            "links": 
+            [
+                {
+                    "name": "Yahoo Finance",
+                    "url": "//finance.yahoo.com"
+                }
+            ]
+        },
+        { 
+            "name": "Sports",
+            "links": 
+            [
+                {
+                    "name": "HUMM BABY",
+                    "url": "//13403245780.baseball.cbssports.com/"
+                }
+            ]
+        },
+        {
+            "name": "Auto",
+            "links": 
+            [
+                {
+                    "name": "MSN Auto",
+                    "url": "//autos.msn.com"
+                },
+                {
+                    "name": "Cars.com",
+                    "url": "//www.cars.com"
+                }
+            ]
+        }
+    ]
+}

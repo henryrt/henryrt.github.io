@@ -1,5 +1,15 @@
 <div  data-ng-controller="aboutController as vm">
     <h1>{{vm.title}}</h1>
     <p class="lead">{{vm.text}}</p>
+    <p>{{vm.error}}</p>
+    
+        <h3 class="" ng-repeat="group in vm.links.groups">{{group.name}}
+            <ul>
+                <li ng-repeat="link in group.links">
+                    <a class="lead" href="{{link.url}}" target="_blank">{{link.name}}</a>
+                </li>
+            </ul>
+        </h3>
+    
 </div>
 

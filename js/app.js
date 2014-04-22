@@ -9,8 +9,7 @@
     
     app.constant('appConfig', {
         project: 'R.T.Henry',
-        views: ['Home', 'About', 'Contact'],
-        navbarColor: '#123456'
+        views: ['Home', 'About', 'Contact']
     });
     
     /* configure routing */
@@ -18,18 +17,15 @@
         $routeProvider
             .when('/home', {
                 title: 'Home of ',
-                templateUrl: 'home/home.html',
-                controller: 'homeController'
+                templateUrl: 'home/home.html'
             })
             .when('/about', {
                 title: 'About',
-                templateUrl: 'about/about.html',
-                controller: 'aboutController'
+                templateUrl: 'about/about.html'
             })
             .when('/contact', {
                 title: 'Contact',
-                templateUrl: 'contact/contact.html',
-                controller: 'contactController'
+                templateUrl: 'contact/contact.html'
             })
             .otherwise({
                 redirectTo: '/home'
