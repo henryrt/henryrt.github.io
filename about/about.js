@@ -1,5 +1,5 @@
 /*global angular*/
-(function () {
+var About = (function () {
     'use strict';
     
     var app = angular.module('app');
@@ -25,4 +25,5 @@
             });
     }]);
     
+    return true;
 }());

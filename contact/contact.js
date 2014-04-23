@@ -1,5 +1,6 @@
-/*global angular*/
-(function () {
+/*global angular, console*/
+
+var Contact = (function () {
     'use strict';
     
     var app = angular.module('app');
@@ -10,5 +11,5 @@
         vm.text = 'This is how you contact me.';
     });
     
-    
+    return true;
 }());

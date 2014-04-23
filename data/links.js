@@ -1,5 +1,5 @@
 /*global angular, $, console, $q*/
-(function () {
+var Links = (function () {
     'use strict';
     
     var serviceId = 'datacontext',
@@ -23,7 +23,7 @@
                     var data = {};
                     data.groups = [{}];
                     data.groups[0].name = "G1";
-                    data.groups[0].links = [{},{}];
+                    data.groups[0].links = [{}, {}];
                     data.groups[0].links[0].name = "Test";
                     data.groups[0].links[0].url = "xxxxx";
                     data.groups[0].links[1].name = "Test 2";
@@ -34,7 +34,7 @@
                 };
                 promise.fail = function (f) {
                     return this;
-                }
+                };
                 return promise;
             },
         
@@ -47,4 +47,5 @@
     }
     app.factory(serviceId, ['$q', datacontext]);
  
+    return true;
 }());

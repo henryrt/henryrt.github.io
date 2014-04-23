@@ -1,17 +1,18 @@
 /*global angular*/
-(function () {
-    'use strict';
+var Main = (function () {
     
+    'use strict';
+
     var app = angular.module("app", [
         'ngRoute',
         'ui.bootstrap'
     ]);
-    
+
     app.constant('appConfig', {
         project: 'R.T.Henry',
         views: ['Home', 'About', 'Contact']
     });
-    
+
     /* configure routing */
     app.config(['$routeProvider', function ($routeProvider) {
         $routeProvider
@@ -31,7 +32,7 @@
                 redirectTo: '/home'
             });
     }]);
-    
+
     app.run(['$rootScope', 'appConfig', function ($rootScope, appConfig) {
         $rootScope.$on('$routeChangeSuccess',
                 function (event, current, previous) {
@@ -39,15 +40,17 @@
                 $rootScope.title = title;
             });
     }]);
-    
+
     /* configure the nav controller */
     app.controller('navController', ['appConfig', '$location', function (appConfig, $location) {
         var navModel = this;
         navModel.project = appConfig.project;
         navModel.views = appConfig.views;
-        
+
         navModel.isActive = function (view) {
             return view === $location.path();
         };
     }]);
+    return true;
+        
 }());

@@ -1,5 +1,5 @@
 /*global angular*/
-(function () {
+var Home = (function () {
     'use strict';
     
     var app = angular.module('app');
@@ -10,6 +10,6 @@
         vm.text = 'This is the home page. Not much here... yet.';
     });
     
-    
+    return true;
 }());
     
