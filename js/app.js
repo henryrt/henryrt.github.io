@@ -9,23 +9,16 @@ var Main = (function () {
     ]);
 
     app.constant('appConfig', {
-        project: 'R.T.Henry',
-        views: ['Home', 'About', 'Contact']
+        project: 'R.T.Henry'
     });
+    
+    app.value('views', []);
 
     /* configure routing */
     app.config(['$routeProvider', function ($routeProvider) {
         $routeProvider
-            .when('/home', {
-                title: 'Home of ',
-                templateUrl: 'home/home.html'
-            })
-            .when('/about', {
-                title: 'About',
-                templateUrl: 'about/about.html'
-            })
             .otherwise({
-                redirectTo: '/home'
+                redirectTo: '/'
             });
     }]);
 
@@ -38,10 +31,10 @@ var Main = (function () {
     }]);
 
     /* configure the nav controller */
-    app.controller('navController', ['appConfig', '$location', function (appConfig, $location) {
+    app.controller('navController', ['appConfig', '$location', 'views', function (appConfig, $location, views) {
         var navModel = this;
         navModel.project = appConfig.project;
-        navModel.views = appConfig.views;
+        navModel.views = views;
 
         navModel.isActive = function (view) {
             return view === $location.path();

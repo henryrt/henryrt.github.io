@@ -9,7 +9,7 @@ var About = (function () {
         dependencies = ['datacontext', '$scope'],
         
         controller = function (datacontext, $scope) {
-            var vm = this,
+            var vm = {},
                 promise = datacontext.getLinks();
 
             vm.title = 'About';
@@ -27,7 +27,16 @@ var About = (function () {
                     vm.error = Common.formatJqxhrErrorMsg(jqXHR, textStatus, errorThrown);
                     $scope.$apply();
                 });
+        
+            return vm;
         };
+    
+    Common.registerRoute(module, {
+        path: '/about',
+        tabName: 'About',
+        title: 'About',
+        templateUrl: 'about/about.html'
+    });
     
     Common.addController(controllerId, module, dependencies, controller);
     

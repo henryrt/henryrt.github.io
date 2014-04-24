@@ -3,23 +3,27 @@
 var Contact = (function () {
     'use strict';
     
-    var app = angular.module('app'),
-        $routeProvider = angular.injector().get('$routeProvider');
+    var module = 'app',
+        
+        dependencies = [],
+        
+        controllerId = 'contactController',
+        
+        controller = function () {
+            return {
+                title: 'Contact',
+                text: 'This is how you contact me.'
+            };
+        };
     
-    app.controller('contactController', function () {
-        var vm = this;
-        vm.title = 'Contact';
-        vm.text = 'This is how you contact me.';
+    Common.registerRoute(module, {
+        path:  '/contact',
+        tabName: 'Contact',
+        title: 'Contact',
+        templateUrl: 'contact/contact.html'
     });
-    
-    
-//    Common.registerRoute($routeProvider,
-//                 {
-//                     path:  '/contact',
-//                     title: 'Contact',
-//            templateUrl: 'contact/contact.html'
-//    });
+                         
+    Common.addController(controllerId, module, dependencies, controller);
 
-             
     return true;
 }());
