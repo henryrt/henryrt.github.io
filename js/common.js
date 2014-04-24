@@ -16,5 +16,14 @@ var Common = (function () {
         angular.module(module).controller(controllerId, dependencies);
     };
     
+    Common.registerRoute = function ($routeProvider, routeInfo) {
+        $routeProvider.when(
+            routeInfo.path,
+            {
+                title: routeInfo.title,
+                templateUrl: routeInfo.templateUrl
+            }
+        );
+    };
     return Common;
 }());

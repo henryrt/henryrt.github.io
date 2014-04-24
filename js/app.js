@@ -24,10 +24,6 @@ var Main = (function () {
                 title: 'About',
                 templateUrl: 'about/about.html'
             })
-            .when('/contact', {
-                title: 'Contact',
-                templateUrl: 'contact/contact.html'
-            })
             .otherwise({
                 redirectTo: '/home'
             });
