@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="ico/favicon.ico">
 
     <title data-ng-bind="title">Title</title>
-
+      
     <!-- Bootstrap core CSS -->
     <link href="css/cerulean/bootstrap.css" rel="stylesheet">
 
@@ -54,29 +54,8 @@
         <div ng-view></div>
     </div><!-- /.container -->
 
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="scripts/bootstrap/bootstrap.min.js"></script>
-    <script src="scripts/angular/angular.js"></script>
-    <script src="scripts/angular-route/angular-route.js"></script>
-    <script src="scripts/angular-bootstrap/ui-bootstrap.js"></script>
-    <!-- my files   
-    ================================================== -->
-    <script src="js/common.js"></script>
-    <script src="js/app.js"></script>
-    <script src="data/links.js"></script>
-    <script src="home/home.js"></script>
-    <script src="about/about.js"></script>
-    <script src="contact/contact.js"></script>
- 
-      <script>
-          window.onload = function () {
-          Home = window.Home || false;
-          if (!Home) alert('Home not installed.');
-          }
-      </script>
+    <script data-main="js/app.js" src="scripts/require/require.js"></script>
+
   </body>
 </html>

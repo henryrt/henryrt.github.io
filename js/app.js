@@ -1,5 +1,19 @@
-/*global angular*/
-var Main = (function () {
+/*global angular, requirejs*/
+requirejs.config({
+    baseUrl: 'scripts',
+    paths: {
+        js: '../js',
+        data: '../data'
+    }
+});
+
+requirejs(['bootstrap/bootstrap.min',
+           'angular/angular.min',
+           'angular-route/angular-route.min',
+           'angular-bootstrap/ui-bootstrap.min',
+           'js/common',
+           'data/links.js'
+          ], function () {
     
     'use strict';
 
@@ -42,4 +56,4 @@ var Main = (function () {
     }]);
     return true;
         
-}());
+});
