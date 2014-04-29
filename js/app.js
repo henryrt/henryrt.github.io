@@ -20,7 +20,7 @@ var Main = (function () {
 
 
     app.constant('appConfig', {
-        project: 'R.T.Henry'
+        project: 'The Shat-man'
     });
     
     app.value('views', []);

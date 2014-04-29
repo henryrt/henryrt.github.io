@@ -11,7 +11,8 @@ var Home = (function () {
         controller = function () {
             return {
                 title: 'Home',
-                text: 'This is the home page. Not much here... yet.'
+                text: 'This is the home page. Not much here... yet.',
+                imgSrc: '/img/shatner.jpg'
             };
         };
     

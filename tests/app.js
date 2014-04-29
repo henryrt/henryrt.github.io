@@ -9,7 +9,7 @@ var Main;
         
         it('should have an appConfig', inject(function (appConfig) {
             expect(appConfig).toBeDefined();
-            expect(appConfig.project).toBe('R.T.Henry');
+            expect(appConfig.project).toBeDefined();
         }));
         
         it('should have no views by default', inject(function (views) {
