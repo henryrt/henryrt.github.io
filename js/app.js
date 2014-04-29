@@ -6,7 +6,18 @@ var Main = (function () {
     var app = angular.module("app", [
         'ngRoute',
         'ui.bootstrap'
-    ]);
+    ]),
+        navController = function (appConfig, $location, views) {
+            var navModel = {};
+            navModel.project = appConfig.project;
+            navModel.views = views;
+
+            navModel.isActive = function (view) {
+                return view === $location.path();
+            };
+            return navModel;
+        };
+
 
     app.constant('appConfig', {
         project: 'R.T.Henry'
@@ -31,15 +42,11 @@ var Main = (function () {
     }]);
 
     /* configure the nav controller */
-    app.controller('navController', ['appConfig', '$location', 'views', function (appConfig, $location, views) {
-        var navModel = this;
-        navModel.project = appConfig.project;
-        navModel.views = views;
-
-        navModel.isActive = function (view) {
-            return view === $location.path();
-        };
-    }]);
-    return true;
+ 
+    app.controller('navController', ['appConfig', '$location', 'views', navController]);
+    
+    return {
+        navController: navController
+    };
         
 }());

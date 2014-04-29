@@ -19,7 +19,9 @@ var Home = (function () {
         path: '/home',
         tabName: 'Home',
         title: 'Home of ',
-        templateUrl: 'home/home.html'
+        templateUrl: 'home/home.html',
+        controller: controller,
+        controllerAs: 'vm'
     });
 
     Common.addController(controllerId, module, dependencies, controller);

@@ -20,7 +20,9 @@ var Contact = (function () {
         path:  '/contact',
         tabName: 'Contact',
         title: 'Contact',
-        templateUrl: 'contact/contact.html'
+        templateUrl: 'contact/contact.html',
+        controller: controller,
+        controllerAs: 'vm'
     });
                          
     Common.addController(controllerId, module, dependencies, controller);

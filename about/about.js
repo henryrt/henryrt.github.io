@@ -35,7 +35,9 @@ var About = (function () {
         path: '/about',
         tabName: 'About',
         title: 'About',
-        templateUrl: 'about/about.html'
+        templateUrl: 'about/about.html',
+        controller: controller,
+        controllerAs: 'vm'
     });
     
     Common.addController(controllerId, module, dependencies, controller);

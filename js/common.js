@@ -29,7 +29,9 @@ var Common = (function () {
                 routeInfo.path,
                 {
                     title: routeInfo.title,
-                    templateUrl: routeInfo.templateUrl
+                    templateUrl: routeInfo.templateUrl,
+                    controller: routeInfo.controller,
+                    controllerAs: routeInfo.controllerAs
                 }
             );
         }]);
